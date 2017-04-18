@@ -13,6 +13,19 @@ class GruposViewController : UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var minhasListasImage: UIImageView!
     
+    override func viewDidLoad() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(vaiPraLista))
+        minhasListasImage.addGestureRecognizer(tap)
+    }
+    
+    func vaiPraLista() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "listaListas")
+        
+        present(view, animated: true, completion: nil)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
@@ -22,8 +35,11 @@ class GruposViewController : UIViewController, UICollectionViewDelegate, UIColle
         
         cell.imagem.image = #imageLiteral(resourceName: "acido")
         
-        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
 }

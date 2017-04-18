@@ -11,4 +11,15 @@ import UIKit
 
 class SplashViewController:UIViewController {
     
+    override func viewDidLoad() {
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ir), userInfo: nil, repeats: false)
+    }
+    
+    func ir() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "loginScreen")
+        
+        present(view, animated: false, completion: nil)
+    }
+    
 }

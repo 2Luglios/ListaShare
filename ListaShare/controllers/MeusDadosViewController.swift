@@ -11,4 +11,8 @@ import UIKit
 
 class MeusDadosViewController : UIViewController {
     
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var repitaTextField: UITextField!
 }

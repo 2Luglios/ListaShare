@@ -13,11 +13,15 @@ class CadastroProdutoViewController: UIViewController {
     
     @IBOutlet weak var imagemImageView: UIImageView!
     @IBOutlet weak var nomeProdutoTextField: UITextField!
-    @IBOutlet weak var quantidadeStepper: UIStepper!
     @IBOutlet weak var quantidadeLabel: UILabel!
     @IBOutlet weak var marcaTextField: UITextField!
     @IBOutlet weak var marcaOpcionalTextField: UITextField!
     @IBOutlet weak var obsTextView: UITextView!
+    
+    @IBAction func quantidadeModificada(_ sender: UIStepper) {
+        quantidadeLabel.text = "\(Int(sender.stepValue))"
+    }
+
     
     
 }
