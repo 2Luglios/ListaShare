@@ -25,16 +25,10 @@ class ListasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! ListaCustomCell
         
         cell.nomeListaLabel.text = listas[indexPath.row].nome
-        
-//        cell.shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
         cell.shareButton.tag = indexPath.row
         
         return cell
     }
-    
-//    func share() {
-//        print("share")
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueListaProdutos" {
@@ -51,7 +45,6 @@ class ListasTableViewController: UITableViewController {
             
             let btn = sender as! UIButton
             let listaSelecionada = listas[btn.tag]
-            print("share \(btn.tag)")
             
             listaProdutos.lista = listaSelecionada
         }
