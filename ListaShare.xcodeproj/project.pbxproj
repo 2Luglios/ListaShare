@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		166E933E1EA7787D00BD1C45 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E933D1EA7787D00BD1C45 /* Usuario.swift */; };
+		166E93411EA79F3700BD1C45 /* CadastraProdutoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */; };
+		166E93441EA7A08C00BD1C45 /* DadosSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E93431EA7A08C00BD1C45 /* DadosSync.swift */; };
 		1671F5031EA671DA0021EC98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671F5021EA671DA0021EC98 /* AppDelegate.swift */; };
 		1671F5081EA671DA0021EC98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671F5061EA671DA0021EC98 /* Main.storyboard */; };
 		1671F50B1EA671DA0021EC98 /* ListaShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1671F5091EA671DA0021EC98 /* ListaShare.xcdatamodeld */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		166E933D1EA7787D00BD1C45 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
+		166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastraProdutoDelegate.swift; path = delegate/CadastraProdutoDelegate.swift; sourceTree = "<group>"; };
+		166E93431EA7A08C00BD1C45 /* DadosSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DadosSync.swift; path = util/DadosSync.swift; sourceTree = "<group>"; };
 		1671F4FF1EA671DA0021EC98 /* ListaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1671F5021EA671DA0021EC98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1671F5071EA671DA0021EC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +104,22 @@
 			name = modelo;
 			sourceTree = "<group>";
 		};
+		166E933F1EA79F1F00BD1C45 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */,
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
+		166E93421EA7A07600BD1C45 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				166E93431EA7A08C00BD1C45 /* DadosSync.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		1671F4F61EA671DA0021EC98 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +143,8 @@
 		1671F5011EA671DA0021EC98 /* ListaShare */ = {
 			isa = PBXGroup;
 			children = (
+				166E93421EA7A07600BD1C45 /* util */,
+				166E933F1EA79F1F00BD1C45 /* delegate */,
 				166E933C1EA7786300BD1C45 /* modelo */,
 				1F9D24181EA68EDA00F3FE86 /* DAO */,
 				1671F5281EA67A940021EC98 /* controllers */,
@@ -403,9 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166E93441EA7A08C00BD1C45 /* DadosSync.swift in Sources */,
 				1671F5341EA682900021EC98 /* LoginViewController.swift in Sources */,
 				1671F5361EA682A90021EC98 /* MeusDadosViewController.swift in Sources */,
 				1671F5321EA6827D0021EC98 /* ListaProdutoTableViewController.swift in Sources */,
+				166E93411EA79F3700BD1C45 /* CadastraProdutoDelegate.swift in Sources */,
 				1671F5031EA671DA0021EC98 /* AppDelegate.swift in Sources */,
 				1671F5301EA682510021EC98 /* ListasTableViewController.swift in Sources */,
 				1671F52E1EA6822D0021EC98 /* ProdutoCustomCell.swift in Sources */,

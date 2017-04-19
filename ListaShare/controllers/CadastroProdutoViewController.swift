@@ -13,6 +13,8 @@ class CadastroProdutoViewController: UIViewController, UIImagePickerControllerDe
     
     var lista: Lista!
     
+    var delegate: CadastraProdutoDelegate!
+    
     @IBOutlet weak var imagemImageView: UIImageView!
     @IBOutlet weak var nomeProdutoTextField: UITextField!
     @IBOutlet weak var quantidadeLabel: UILabel!
@@ -90,7 +92,7 @@ class CadastroProdutoViewController: UIViewController, UIImagePickerControllerDe
         produto.quantidade = Int32(quantidadeLabel.text!)!
         produto.imagem = imagemImageView.image
         
-        lista.addToProdutos(produto)
+        delegate.adicionaProduto(produto)
         
         dao.saveContext()
         

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ListaProdutoTableViewController: UITableViewController {
+class ListaProdutoTableViewController: UITableViewController, CadastraProdutoDelegate {
     
     var lista: Lista!
     
@@ -39,6 +39,7 @@ class ListaProdutoTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueAddProduto" {
             let dest = segue.destination as! CadastroProdutoViewController
+            dest.delegate = self
             dest.lista = lista
         }
     }
@@ -52,6 +53,12 @@ class ListaProdutoTableViewController: UITableViewController {
             return produtos.count
         }
         return 0
+    }
+    
+    func adicionaProduto(_ prod:Produto) {
+        lista.addToProdutos(prod)
+        
+        tableView.reloadData()
     }
     
 }
