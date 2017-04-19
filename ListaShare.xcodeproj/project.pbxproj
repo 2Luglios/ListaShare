@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166E933E1EA7787D00BD1C45 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E933D1EA7787D00BD1C45 /* Usuario.swift */; };
 		1671F5031EA671DA0021EC98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671F5021EA671DA0021EC98 /* AppDelegate.swift */; };
 		1671F5081EA671DA0021EC98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671F5061EA671DA0021EC98 /* Main.storyboard */; };
 		1671F50B1EA671DA0021EC98 /* ListaShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1671F5091EA671DA0021EC98 /* ListaShare.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		166E933D1EA7787D00BD1C45 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
 		1671F4FF1EA671DA0021EC98 /* ListaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1671F5021EA671DA0021EC98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1671F5071EA671DA0021EC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		166E933C1EA7786300BD1C45 /* modelo */ = {
+			isa = PBXGroup;
+			children = (
+				166E933D1EA7787D00BD1C45 /* Usuario.swift */,
+			);
+			name = modelo;
+			sourceTree = "<group>";
+		};
 		1671F4F61EA671DA0021EC98 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		1671F5011EA671DA0021EC98 /* ListaShare */ = {
 			isa = PBXGroup;
 			children = (
+				166E933C1EA7786300BD1C45 /* modelo */,
 				1F9D24181EA68EDA00F3FE86 /* DAO */,
 				1671F5281EA67A940021EC98 /* controllers */,
 				1671F5251EA67A2A0021EC98 /* custom */,
@@ -400,6 +411,7 @@
 				1671F52E1EA6822D0021EC98 /* ProdutoCustomCell.swift in Sources */,
 				1F9D241A1EA68F0400F3FE86 /* Dao.swift in Sources */,
 				1671F5401EA687C00021EC98 /* SplashViewController.swift in Sources */,
+				166E933E1EA7787D00BD1C45 /* Usuario.swift in Sources */,
 				1671F53E1EA6843E0021EC98 /* ShareTableViewController.swift in Sources */,
 				1671F53D1EA6843E0021EC98 /* GruposViewController.swift in Sources */,
 				1671F50B1EA671DA0021EC98 /* ListaShare.xcdatamodeld in Sources */,

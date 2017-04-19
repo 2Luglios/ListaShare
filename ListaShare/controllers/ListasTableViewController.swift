@@ -11,45 +11,40 @@ import UIKit
 
 class ListasTableViewController: UITableViewController {
     
-    var lista:[Lista] = []
+    var listas:[Lista] = []
+    var listaSelecionada:Lista!
     
     override func viewDidLoad() {
-        lista = Dao<Lista>().list()
-    }
-    
-    @IBAction func voltar () {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "grupos")
-        
-        present(view, animated: true, completion: nil)
+        listas = Dao<Lista>().list()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lista.count
+        return listas.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! ListaCustomCell
         
-        cell.nomeListaLabel.text = lista[indexPath.row].nome
+        cell.nomeListaLabel.text = listas[indexPath.row].nome
         
         cell.shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "listaProdutos")
-        
-       // view.produtos = lista[indexPath.row].produtos?.allObjects as! [Produto]
-        
-        navigationController?.present(view, animated: true, completion: nil)
-        
-    }
-    
     func share() {
         print("share")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueListaProdutos" {
+            let listaProdutos = segue.destination as! ListaProdutoTableViewController
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+            listaSelecionada = listas[indexPath.row]
+            listaProdutos.lista = listaSelecionada
+        }
     }
     
     @IBAction func adicionarLista(_ sender: Any) {
@@ -64,7 +59,7 @@ class ListasTableViewController: UITableViewController {
             lista.nome = alerta.textFields?[0].text
             dao.saveContext()
             
-            self.lista = Dao<Lista>().list()
+            self.listas = Dao<Lista>().list()
             
             self.tableView.reloadData()
         }))

@@ -11,15 +11,13 @@ import UIKit
 
 class GruposViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var minhasListasImage: UIImageView!
+    var compartilhamentos:[Compartilhamento] = []
     
     override func viewDidLoad() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(vaiPraLista))
-        minhasListasImage.addGestureRecognizer(tap)
+        
     }
     
     func vaiPraLista() {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "listaListas")
         
@@ -27,13 +25,14 @@ class GruposViewController : UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return compartilhamentos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customcell", for: indexPath) as! CustomCollectionViewCell
         
-        cell.imagem.image = #imageLiteral(resourceName: "acido")
+//        cell.imagem.image =
+//        cell.nome.text =
         
         return cell
     }

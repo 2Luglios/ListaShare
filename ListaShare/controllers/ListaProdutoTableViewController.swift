@@ -11,16 +11,9 @@ import UIKit
 
 class ListaProdutoTableViewController: UITableViewController {
     
-    var produtos:[Produto] = []
+    var lista: Lista!
     
     override func viewDidLoad() {
-    }
-    
-    @IBAction func voltar () {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "listaListas")
-        
-        present(view, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -30,7 +23,15 @@ class ListaProdutoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! ProdutoCustomCell
         
+        let produtos = lista.produtos?.allObjects as! [Produto]
+        let produto = produtos[indexPath.row]
         
+        cell.marcaLabel.text = produto.marca
+        cell.checkBoxImageView.image = produto.checado ? #imageLiteral(resourceName: "acido") : #imageLiteral(resourceName: "acido")
+        cell.imagemImageView.image = produto.imagem as? UIImage
+        cell.nomeProdutoLabel.text = produto.nome
+        cell.obsTextView.text = produto.obs
+        cell.opcionalLabel.text = produto.opcional
         
         return cell
     }
@@ -40,7 +41,10 @@ class ListaProdutoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return produtos.count
+        if let produtos = lista.produtos {
+            return produtos.count
+        }
+        return 0
     }
     
 }
