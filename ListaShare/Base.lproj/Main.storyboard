@@ -330,6 +330,9 @@
                                             <rect key="frame" x="269" y="7" width="40" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Share"/>
+                                            <connections>
+                                                <segue destination="UMJ-Jl-3il" kind="show" identifier="segueAddCompartilhamento" id="Zc4-Vr-Xvt"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -347,7 +350,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista" id="iZi-Nw-CpX">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="5Qb-XU-r2l">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="5Qb-XU-r2l">
                             <connections>
                                 <action selector="adicionarLista:" destination="jjG-uH-5ML" id="QPr-6E-fot"/>
                             </connections>
@@ -358,7 +361,7 @@
             </objects>
             <point key="canvasLocation" x="3729" y="138"/>
         </scene>
-        <!--Share Table View Controller-->
+        <!--Emails-->
         <scene sceneID="yuj-ZG-n3y">
             <objects>
                 <tableViewController storyboardIdentifier="emailShare" id="UMJ-Jl-3il" customClass="ShareTableViewController" customModule="ListaShare" customModuleProvider="target" sceneMemberID="viewController">
@@ -367,7 +370,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5kO-Gi-iRx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="5kO-Gi-iRx">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5kO-Gi-iRx" id="Auk-AD-g8V">
@@ -381,6 +384,13 @@
                             <outlet property="delegate" destination="UMJ-Jl-3il" id="xeJ-Fu-cah"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Emails" id="vt7-ld-JqE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="73V-45-30W">
+                            <connections>
+                                <action selector="addEmail:" destination="UMJ-Jl-3il" id="eyO-4M-oeb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUW-0H-BfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,7 +430,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Um comentário do produto que eh mó legal pra se ler no mercado" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3XX-kZ-5jM">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3XX-kZ-5jM">
                                             <rect key="frame" x="71" y="66" width="187" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -466,7 +476,7 @@
                     <navigationItem key="navigationItem" title="Produtos" id="j3T-l3-zgd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GtI-zp-r7G">
                             <connections>
-                                <segue destination="UtY-cL-c0N" kind="show" id="khL-Kd-TU5"/>
+                                <segue destination="UtY-cL-c0N" kind="show" identifier="segueAddProduto" id="khL-Kd-TU5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -561,7 +571,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Ur-Wvn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Ur-Wvn">
                                 <rect key="frame" x="16" y="476" width="288" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

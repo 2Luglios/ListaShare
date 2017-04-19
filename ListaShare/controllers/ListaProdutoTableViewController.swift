@@ -36,6 +36,13 @@ class ListaProdutoTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueAddProduto" {
+            let dest = segue.destination as! CadastroProdutoViewController
+            dest.lista = lista
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }

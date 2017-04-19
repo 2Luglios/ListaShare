@@ -11,6 +11,8 @@ import UIKit
 
 class CadastroProdutoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var lista: Lista!
+    
     @IBOutlet weak var imagemImageView: UIImageView!
     @IBOutlet weak var nomeProdutoTextField: UITextField!
     @IBOutlet weak var quantidadeLabel: UILabel!
@@ -87,6 +89,8 @@ class CadastroProdutoViewController: UIViewController, UIImagePickerControllerDe
         produto.opcional = marcaOpcionalTextField.text
         produto.quantidade = Int32(quantidadeLabel.text!)!
         produto.imagem = imagemImageView.image
+        
+        lista.addToProdutos(produto)
         
         dao.saveContext()
         

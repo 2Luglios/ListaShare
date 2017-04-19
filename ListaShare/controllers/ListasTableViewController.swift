@@ -12,7 +12,6 @@ import UIKit
 class ListasTableViewController: UITableViewController {
     
     var listas:[Lista] = []
-    var listaSelecionada:Lista!
     
     override func viewDidLoad() {
         listas = Dao<Lista>().list()
@@ -27,14 +26,15 @@ class ListasTableViewController: UITableViewController {
         
         cell.nomeListaLabel.text = listas[indexPath.row].nome
         
-        cell.shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
+//        cell.shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
+        cell.shareButton.tag = indexPath.row
         
         return cell
     }
     
-    func share() {
-        print("share")
-    }
+//    func share() {
+//        print("share")
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueListaProdutos" {
@@ -42,7 +42,17 @@ class ListasTableViewController: UITableViewController {
             
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)!
-            listaSelecionada = listas[indexPath.row]
+            let listaSelecionada = listas[indexPath.row]
+            
+            listaProdutos.lista = listaSelecionada
+        }
+        if segue.identifier == "segueAddCompartilhamento" {
+            let listaProdutos = segue.destination as! ShareTableViewController
+            
+            let btn = sender as! UIButton
+            let listaSelecionada = listas[btn.tag]
+            print("share \(btn.tag)")
+            
             listaProdutos.lista = listaSelecionada
         }
     }
