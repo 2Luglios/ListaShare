@@ -28,8 +28,8 @@
 		1671F53E1EA6843E0021EC98 /* ShareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671F53C1EA6843E0021EC98 /* ShareTableViewController.swift */; };
 		1671F5401EA687C00021EC98 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671F53F1EA687C00021EC98 /* SplashViewController.swift */; };
 		1F9D241A1EA68F0400F3FE86 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D24191EA68F0400F3FE86 /* Dao.swift */; };
-		261ABAF310859B97DAB3915F /* Pods_ListaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00091CF5A6A0E720EB291A /* Pods_ListaShare.framework */; };
 		334506F53BF99C84F568357E /* Pods_ListaShareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5A52F0C17F52517A042DA2 /* Pods_ListaShareTests.framework */; };
+		A81D8BD786EC5571B549B421 /* Pods_ListaShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00091CF5A6A0E720EB291A /* Pods_ListaShare.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,12 @@
 		166E933D1EA7787D00BD1C45 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
 		166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastraProdutoDelegate.swift; path = delegate/CadastraProdutoDelegate.swift; sourceTree = "<group>"; };
 		166E93431EA7A08C00BD1C45 /* DadosSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DadosSync.swift; path = util/DadosSync.swift; sourceTree = "<group>"; };
+		166E93451EA7C5B300BD1C45 /* Pods_ListaShareTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_ListaShareTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_ListaShareTests.framework"; sourceTree = "<group>"; };
+		166E93471EA7D78300BD1C45 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/ListaShare-acoggoxmkowquecbvhawzucbvtzp/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		166E93481EA7D78300BD1C45 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/ListaShare-acoggoxmkowquecbvhawzucbvtzp/Build/Products/Debug-iphonesimulator/AlamofireImage/AlamofireImage.framework"; sourceTree = "<group>"; };
+		166E93491EA7D78300BD1C45 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/ListaShare-acoggoxmkowquecbvhawzucbvtzp/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
+		166E934A1EA7D78300BD1C45 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/ListaShare-acoggoxmkowquecbvhawzucbvtzp/Build/Products/Debug-iphonesimulator/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		166E934B1EA7D78300BD1C45 /* TPKeyboardAvoiding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TPKeyboardAvoiding.framework; path = "../../../Library/Developer/Xcode/DerivedData/ListaShare-acoggoxmkowquecbvhawzucbvtzp/Build/Products/Debug-iphonesimulator/TPKeyboardAvoiding/TPKeyboardAvoiding.framework"; sourceTree = "<group>"; };
 		1671F4FF1EA671DA0021EC98 /* ListaShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListaShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1671F5021EA671DA0021EC98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1671F5071EA671DA0021EC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				261ABAF310859B97DAB3915F /* Pods_ListaShare.framework in Frameworks */,
+				A81D8BD786EC5571B549B421 /* Pods_ListaShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +221,12 @@
 		6382BF087D31E67BB0DF8169 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				166E93471EA7D78300BD1C45 /* Alamofire.framework */,
+				166E93481EA7D78300BD1C45 /* AlamofireImage.framework */,
+				166E93491EA7D78300BD1C45 /* AlamofireObjectMapper.framework */,
+				166E934A1EA7D78300BD1C45 /* ObjectMapper.framework */,
+				166E934B1EA7D78300BD1C45 /* TPKeyboardAvoiding.framework */,
+				166E93451EA7C5B300BD1C45 /* Pods_ListaShareTests.framework */,
 				1A00091CF5A6A0E720EB291A /* Pods_ListaShare.framework */,
 				DA5A52F0C17F52517A042DA2 /* Pods_ListaShareTests.framework */,
 			);
@@ -584,6 +596,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P5NJ75969Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ListaShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.ListaShare;
@@ -598,6 +614,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P5NJ75969Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ListaShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.ListaShare;

@@ -204,11 +204,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="XT7-KA-J3Y">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PKB-1X-GON"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PKB-1X-GON">
+                            <connections>
+                                <action selector="salvar:" destination="KlP-EC-hpv" id="m8g-gv-P7F"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="zql-5h-kKG" id="Ab6-ai-Szp"/>
                         <outlet property="loginTextField" destination="QZg-xT-I2A" id="Ur7-vi-cqp"/>
+                        <outlet property="repitaTextField" destination="67D-Vx-hO4" id="ke1-vq-R9O"/>
                         <outlet property="senhaTextField" destination="Dkm-DU-kpU" id="WLl-nM-Yz6"/>
                     </connections>
                 </viewController>

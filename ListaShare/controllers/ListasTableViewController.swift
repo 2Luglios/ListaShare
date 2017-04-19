@@ -62,6 +62,8 @@ class ListasTableViewController: UITableViewController {
             lista.nome = alerta.textFields?[0].text
             dao.saveContext()
             
+            self.listas = Dao<Lista>().list()
+            
             self.tableView.reloadData()
         }))
         
