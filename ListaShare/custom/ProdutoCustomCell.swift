@@ -17,7 +17,6 @@ class ProdutoCustomCell: UITableViewCell {
     @IBOutlet weak var opcionalLabel: UILabel!
     @IBOutlet weak var obsTextView: UITextView!
     @IBOutlet weak var quantidadeLabel: UILabel!
-    @IBOutlet weak var checkBoxImageView: UIImageView!
-    
+    @IBOutlet weak var checkBoxButton: UIButton!
     
 }

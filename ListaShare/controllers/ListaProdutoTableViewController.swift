@@ -28,22 +28,27 @@ class ListaProdutoTableViewController: UITableViewController, CadastraProdutoDel
         let produto = produtos[indexPath.row]
         
         cell.marcaLabel.text = produto.marca
-        cell.checkBoxImageView.image = produto.checado ? #imageLiteral(resourceName: "checkOn") : #imageLiteral(resourceName: "checkOff")
+        
+        if ( produto.checado ) {
+            cell.checkBoxButton.setImage(#imageLiteral(resourceName: "checkOn"), for: .normal)
+        } else {
+            cell.checkBoxButton.setImage(#imageLiteral(resourceName: "checkOff"), for: .normal)
+        }
+        cell.checkBoxButton.tag = indexPath.row
+        cell.checkBoxButton.addTarget(self, action: #selector(marcarOuDesmarcar(_:)), for: .touchUpInside)
+        
         cell.imagemImageView.image = produto.imagem as? UIImage
         cell.nomeProdutoLabel.text = produto.nome
         cell.obsTextView.text = produto.obs
         cell.opcionalLabel.text = produto.opcional
         
-        cell.imagemImageView.tag = indexPath.row
-        let tap = UITapGestureRecognizer(target: ListaProdutoTableViewController.self, action: #selector(marcarOuDesmarcar))
-        tap.numberOfTapsRequired = 1
-        cell.imagemImageView.addGestureRecognizer(tap)
-        
         return cell
     }
     
-    func marcarOuDesmarcar() {
-        print("marcar ou não")
+    func marcarOuDesmarcar(_ sender: UIButton) {
+        produtos[sender.tag].checado = !produtos[sender.tag].checado
+        
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
