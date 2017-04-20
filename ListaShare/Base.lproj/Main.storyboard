@@ -772,13 +772,10 @@
     </scenes>
     <resources>
         <image name="ListaLogo" width="235" height="300"/>
-<<<<<<< HEAD
         <image name="calendario" width="75" height="75"/>
-=======
         <image name="checkOff" width="30" height="30"/>
         <image name="checkOn" width="30" height="29"/>
         <image name="launch-1" width="401" height="512"/>
->>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
         <image name="lista" width="61" height="75"/>
         <image name="shareOff" width="30" height="30"/>
         <image name="shareOn" width="30" height="30"/>
