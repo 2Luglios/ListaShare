@@ -76,7 +76,7 @@ class CadastroProdutoViewController: UIViewController, UIImagePickerControllerDe
     }
     
     @IBAction func quantidadeModificada(_ sender: UIStepper) {
-        quantidadeLabel.text = "\(Int(sender.stepValue))"
+        quantidadeLabel.text = "\(Int(sender.value))"
     }
 
     @IBAction func salvar(_ sender: UIBarButtonItem) {

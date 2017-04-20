@@ -86,10 +86,12 @@ class ListasTableViewController: UITableViewController, GravaNaListaDelegate, Ca
     func gravarProdutoNaLista(_ produto: Produto) {
         listas[posicaoListaUsada].addToProdutos(produto)
         Dao<Lista>().saveContext()
+        tableView.reloadData()
     }
     
     func cadastraSharedNaLista(_ shared:Shared){
         listas[posicaoListaUsada].addToShared(shared)
         Dao<Lista>().saveContext()
+        tableView.reloadData()
     }
 }
