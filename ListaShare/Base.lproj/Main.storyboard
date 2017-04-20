@@ -380,14 +380,15 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Minha primeira lista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j70-se-oSE">
-                                            <rect key="frame" x="51" y="11" width="213" height="21"/>
+                                            <rect key="frame" x="51" y="11" width="223" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-gQ-Pvc">
-                                            <rect key="frame" x="272" y="6" width="40" height="30"/>
-                                            <state key="normal" title="Share"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-gQ-Pvc">
+                                            <rect key="frame" x="282" y="6" width="30" height="30"/>
+                                            <state key="normal" image="shareOff"/>
+                                            <state key="selected" image="shareOn"/>
                                             <connections>
                                                 <segue destination="UMJ-Jl-3il" kind="show" identifier="segueAddCompartilhamento" id="Zc4-Vr-Xvt"/>
                                             </connections>
@@ -753,6 +754,8 @@
         <image name="checkOff" width="30" height="30"/>
         <image name="checkOn" width="30" height="29"/>
         <image name="lista" width="61" height="75"/>
+        <image name="shareOff" width="30" height="30"/>
+        <image name="shareOn" width="30" height="30"/>
         <image name="tetadenega.jpg" width="768" height="1024"/>
     </resources>
 </document>
