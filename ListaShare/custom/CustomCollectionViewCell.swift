@@ -12,5 +12,6 @@ import UIKit
 class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imagem: UIImageView!
+    @IBOutlet weak var nome: UILabel!
     
 }

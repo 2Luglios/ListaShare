@@ -23,6 +23,8 @@ class Dao<T> where T:NSManagedObject {
             tabela = "Lista"
         } else if type(of: T.self) == type(of: Compartilhamento.self) {
             tabela = "Compartilhamento"
+        } else if type(of: T.self) == type(of: Shared.self) {
+            tabela = "Shared"
         } else {
             tabela = ""
         }

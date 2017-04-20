@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1602164C1EA8D78300A1F618 /* GravaNaListaDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602164B1EA8D78300A1F618 /* GravaNaListaDelegate.swift */; };
+		1602164E1EA8DDAB00A1F618 /* CadastraSharedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602164D1EA8DDAB00A1F618 /* CadastraSharedDelegate.swift */; };
 		166E933E1EA7787D00BD1C45 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E933D1EA7787D00BD1C45 /* Usuario.swift */; };
 		166E93411EA79F3700BD1C45 /* CadastraProdutoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */; };
 		166E93441EA7A08C00BD1C45 /* DadosSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E93431EA7A08C00BD1C45 /* DadosSync.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1602164B1EA8D78300A1F618 /* GravaNaListaDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GravaNaListaDelegate.swift; path = delegate/GravaNaListaDelegate.swift; sourceTree = "<group>"; };
+		1602164D1EA8DDAB00A1F618 /* CadastraSharedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastraSharedDelegate.swift; path = delegate/CadastraSharedDelegate.swift; sourceTree = "<group>"; };
 		166E933D1EA7787D00BD1C45 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
 		166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastraProdutoDelegate.swift; path = delegate/CadastraProdutoDelegate.swift; sourceTree = "<group>"; };
 		166E93431EA7A08C00BD1C45 /* DadosSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DadosSync.swift; path = util/DadosSync.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				166E93401EA79F3700BD1C45 /* CadastraProdutoDelegate.swift */,
+				1602164B1EA8D78300A1F618 /* GravaNaListaDelegate.swift */,
+				1602164D1EA8DDAB00A1F618 /* CadastraSharedDelegate.swift */,
 			);
 			name = delegate;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 				1671F5361EA682A90021EC98 /* MeusDadosViewController.swift in Sources */,
 				1671F5321EA6827D0021EC98 /* ListaProdutoTableViewController.swift in Sources */,
 				166E93411EA79F3700BD1C45 /* CadastraProdutoDelegate.swift in Sources */,
+				1602164C1EA8D78300A1F618 /* GravaNaListaDelegate.swift in Sources */,
 				1671F5031EA671DA0021EC98 /* AppDelegate.swift in Sources */,
 				1671F5301EA682510021EC98 /* ListasTableViewController.swift in Sources */,
 				1671F52E1EA6822D0021EC98 /* ProdutoCustomCell.swift in Sources */,
@@ -456,6 +463,7 @@
 				1671F53D1EA6843E0021EC98 /* GruposViewController.swift in Sources */,
 				1671F50B1EA671DA0021EC98 /* ListaShare.xcdatamodeld in Sources */,
 				1671F5381EA682C10021EC98 /* CadastroProdutoViewController.swift in Sources */,
+				1602164E1EA8DDAB00A1F618 /* CadastraSharedDelegate.swift in Sources */,
 				1671F5271EA67A4F0021EC98 /* CustomCollectionViewCell.swift in Sources */,
 				1671F52C1EA6821D0021EC98 /* ListaCustomCell.swift in Sources */,
 			);

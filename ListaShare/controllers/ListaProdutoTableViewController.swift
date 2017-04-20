@@ -11,7 +11,9 @@ import UIKit
 
 class ListaProdutoTableViewController: UITableViewController, CadastraProdutoDelegate {
     
-    var lista: Lista!
+    var produtos:[Produto] = []
+    
+    var delegate:GravaNaListaDelegate!
     
     override func viewDidLoad() {
     }
@@ -23,11 +25,10 @@ class ListaProdutoTableViewController: UITableViewController, CadastraProdutoDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! ProdutoCustomCell
         
-        let produtos = lista.produtos?.allObjects as! [Produto]
         let produto = produtos[indexPath.row]
         
         cell.marcaLabel.text = produto.marca
-        cell.checkBoxImageView.image = produto.checado ? #imageLiteral(resourceName: "acido") : #imageLiteral(resourceName: "acido")
+        //cell.checkBoxImageView.image = produto.checado ?  : #imageLiteral(resourceName: "acido")
         cell.imagemImageView.image = produto.imagem as? UIImage
         cell.nomeProdutoLabel.text = produto.nome
         cell.obsTextView.text = produto.obs
@@ -40,7 +41,6 @@ class ListaProdutoTableViewController: UITableViewController, CadastraProdutoDel
         if segue.identifier == "segueAddProduto" {
             let dest = segue.destination as! CadastroProdutoViewController
             dest.delegate = self
-            dest.lista = lista
         }
     }
     
@@ -49,15 +49,12 @@ class ListaProdutoTableViewController: UITableViewController, CadastraProdutoDel
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let produtos = lista.produtos {
-            return produtos.count
-        }
-        return 0
+        return produtos.count
     }
     
     func adicionaProduto(_ prod:Produto) {
-        lista.addToProdutos(prod)
-        
+        produtos.append(prod)
+        delegate.gravarProdutoNaLista(prod)
         tableView.reloadData()
     }
     

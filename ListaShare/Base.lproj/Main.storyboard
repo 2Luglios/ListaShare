@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,6 +84,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtP-sV-KyM">
                                 <rect key="frame" x="16" y="298" width="62" height="30"/>
                                 <state key="normal" title="Registrar"/>
+                                <connections>
+                                    <segue destination="KlP-EC-hpv" kind="show" id="SAi-Yl-EdX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKt-m6-nRX">
                                 <rect key="frame" x="105" y="298" width="111" height="30"/>
@@ -297,14 +300,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="62" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lista" translatesAutoresizingMaskIntoConstraints="NO" id="jV9-mt-lkH">
-                                                    <rect key="frame" x="13" y="4" width="36" height="51"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendario" translatesAutoresizingMaskIntoConstraints="NO" id="jV9-mt-lkH">
+                                                    <rect key="frame" x="13" y="4" width="36" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tamadrum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-8K-usV">
+                                                    <rect key="frame" x="0.0" y="52" width="62" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="imagem" destination="jV9-mt-lkH" id="eL0-tO-Cyn"/>
+                                            <outlet property="nome" destination="a5B-8K-usV" id="fTD-QS-hRb"/>
+                                            <segue destination="MWX-ci-Mi6" kind="show" identifier="segueCompartilhado" id="Dh5-dT-3wW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -357,6 +369,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Grupos" id="AS8-66-oje"/>
+                    <connections>
+                        <outlet property="collectionView" destination="1jN-jf-LB1" id="Hb8-tW-xwr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCD-Mu-uT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,7 +390,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFu-vk-QtR" id="4g2-n2-Np5">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lista" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-nl-tz6">
@@ -433,7 +448,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eY5-nc-z7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3729" y="138"/>
+            <point key="canvasLocation" x="3728" y="-246"/>
         </scene>
         <!--Emails-->
         <scene sceneID="yuj-ZG-n3y">
@@ -448,7 +463,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5kO-Gi-iRx" id="Auk-AD-g8V">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -468,7 +483,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUW-0H-BfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3728" y="961"/>
+            <point key="canvasLocation" x="3728" y="750"/>
         </scene>
         <!--Produtos-->
         <scene sceneID="MGr-of-PuM">
@@ -483,7 +498,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ib5-Ko-qSp" id="FvF-RP-RuC">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="130.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tetadenega.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-lS-LVf">
@@ -757,12 +772,20 @@
     </scenes>
     <resources>
         <image name="ListaLogo" width="235" height="300"/>
+<<<<<<< HEAD
+        <image name="calendario" width="75" height="75"/>
+=======
         <image name="checkOff" width="30" height="30"/>
         <image name="checkOn" width="30" height="29"/>
         <image name="launch-1" width="401" height="512"/>
+>>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
         <image name="lista" width="61" height="75"/>
         <image name="shareOff" width="30" height="30"/>
         <image name="shareOn" width="30" height="30"/>
         <image name="tetadenega.jpg" width="768" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dh5-dT-3wW"/>
+        <segue reference="4oM-fQ-34t"/>
+    </inferredMetricsTieBreakers>
 </document>

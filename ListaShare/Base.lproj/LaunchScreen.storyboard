@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_0" orientation="portrait">
+>>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
+<<<<<<< HEAD
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+=======
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+>>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +31,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ListaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kLw-Yu-NOF">
+                                <rect key="frame" x="70" y="183" width="235" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="dbU-O1-Dmf"/>
+                                    <constraint firstAttribute="width" constant="235" id="u77-ez-hAf"/>
+=======
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-1" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-zl-2ss">
                                 <rect key="frame" x="10" y="28" width="300" height="512"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ETl-ZT-9kr"/>
+>>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+<<<<<<< HEAD
+                            <constraint firstItem="kLw-Yu-NOF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="54" id="TXj-0m-T9A"/>
+                            <constraint firstItem="kLw-Yu-NOF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="163" id="rJy-My-zof"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="kLw-Yu-NOF" secondAttribute="bottom" constant="184" id="s4e-i4-nPg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kLw-Yu-NOF" secondAttribute="trailing" constant="54" id="yB4-jQ-q2D"/>
+=======
                             <constraint firstItem="yxy-zl-2ss" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OSQ-sh-W2d"/>
                             <constraint firstItem="yxy-zl-2ss" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uO5-tu-ewu"/>
+>>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
                         </constraints>
                     </view>
                 </viewController>
@@ -41,6 +66,10 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
+        <image name="ListaLogo" width="235" height="300"/>
+=======
         <image name="launch-1" width="401" height="512"/>
+>>>>>>> 307df240726bb814367b2dc1870c23dfffb90497
     </resources>
 </document>
