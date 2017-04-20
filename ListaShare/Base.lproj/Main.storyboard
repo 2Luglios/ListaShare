@@ -23,8 +23,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ListaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ohi-Ra-WsZ">
-                                <rect key="frame" x="42.5" y="134" width="235" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohi-Ra-WsZ">
+                                <rect key="frame" x="10" y="28" width="300" height="512"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="WMn-PG-bIk"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,6 +36,9 @@
                             <constraint firstItem="Ohi-Ra-WsZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mpP-Tt-0Az"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="launchImage" destination="Ohi-Ra-WsZ" id="Jp1-27-LdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -753,6 +759,7 @@
         <image name="ListaLogo" width="235" height="300"/>
         <image name="checkOff" width="30" height="30"/>
         <image name="checkOn" width="30" height="29"/>
+        <image name="launch-1" width="401" height="512"/>
         <image name="lista" width="61" height="75"/>
         <image name="shareOff" width="30" height="30"/>
         <image name="shareOn" width="30" height="30"/>
