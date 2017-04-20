@@ -20,6 +20,4 @@ class LoginViewController: UIViewController {
     @IBAction func esqueciASenha(_ sender: Any) {
     }
     
-    @IBAction func entrar(_ sender: Any) {
-    }
 }

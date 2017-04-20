@@ -11,21 +11,20 @@ import UIKit
 
 class ShareTableViewController: UITableViewController {
     
-    var lista:Lista!
+    var shareds:[Shared] = []
+    var delegate:CadastraSharedDelegate!
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (lista.shared?.count)!
+        return shareds.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "celula")
         
-        let compartilhamentos = lista.shared?.allObjects as! [Compartilhamento]
+        let shared = shareds[indexPath.row]
         
-        let compartilhamento = compartilhamentos[indexPath.row]
-        
-        cell.textLabel?.text = compartilhamento.nome
-        cell.detailTextLabel?.text = compartilhamento.email
+        cell.textLabel?.text = shared.nome
+        cell.detailTextLabel?.text = shared.email
         
         return cell
     }
@@ -43,12 +42,13 @@ class ShareTableViewController: UITableViewController {
         alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             (UIAlertAction) in
             
-            let dao = Dao<Compartilhamento>()
-            let compartilhamento = dao.new()
-            compartilhamento.nome = alerta.textFields?[0].text
-            compartilhamento.email = alerta.textFields?[1].text
+            let dao = Dao<Shared>()
+            let shared = dao.new()
+            shared.nome = alerta.textFields?[0].text
+            shared.email = alerta.textFields?[1].text
             
-            self.lista.addToShared(compartilhamento)
+            self.delegate.cadastraSharedNaLista(shared)
+            self.shareds.append(shared)
             dao.saveContext()
 
             self.tableView.reloadData()

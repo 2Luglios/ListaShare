@@ -11,8 +11,6 @@ import UIKit
 
 class CadastroProdutoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var lista: Lista!
-    
     var delegate: CadastraProdutoDelegate!
     
     @IBOutlet weak var imagemImageView: UIImageView!

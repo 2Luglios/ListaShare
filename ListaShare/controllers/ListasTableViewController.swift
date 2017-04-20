@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class ListasTableViewController: UITableViewController {
+class ListasTableViewController: UITableViewController, GravaNaListaDelegate, CadastraSharedDelegate {
     
     var listas:[Lista] = []
+    var posicaoListaUsada:Int!
     
     override func viewDidLoad() {
         listas = Dao<Lista>().list()
@@ -38,15 +39,19 @@ class ListasTableViewController: UITableViewController {
             let indexPath = tableView.indexPath(for: cell)!
             let listaSelecionada = listas[indexPath.row]
             
-            listaProdutos.lista = listaSelecionada
+            posicaoListaUsada = indexPath.row
+            listaProdutos.delegate = self
+            listaProdutos.produtos = listaSelecionada.produtos?.allObjects as! [Produto]
         }
         if segue.identifier == "segueAddCompartilhamento" {
-            let listaProdutos = segue.destination as! ShareTableViewController
+            let sharedTableView = segue.destination as! ShareTableViewController
             
             let btn = sender as! UIButton
             let listaSelecionada = listas[btn.tag]
             
-            listaProdutos.lista = listaSelecionada
+            posicaoListaUsada = btn.tag
+            sharedTableView.delegate = self
+            sharedTableView.shareds = listaSelecionada.shared?.allObjects as! [Shared]
         }
     }
     
@@ -71,5 +76,15 @@ class ListasTableViewController: UITableViewController {
         
         navigationController?.present(alerta, animated: true, completion: nil)
         
+    }
+    
+    func gravarProdutoNaLista(_ produto: Produto) {
+        listas[posicaoListaUsada].addToProdutos(produto)
+        Dao<Lista>().saveContext()
+    }
+    
+    func cadastraSharedNaLista(_ shared:Shared){
+        listas[posicaoListaUsada].addToShared(shared)
+        Dao<Lista>().saveContext()
     }
 }
