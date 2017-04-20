@@ -27,6 +27,11 @@ class ListasTableViewController: UITableViewController, GravaNaListaDelegate, Ca
         
         cell.nomeListaLabel.text = listas[indexPath.row].nome
         cell.shareButton.tag = indexPath.row
+        if (listas[indexPath.row].shared?.count)! > 0 {
+            cell.shareButton.setImage(#imageLiteral(resourceName: "shareOn"), for: UIControlState.normal)
+        } else {
+            cell.shareButton.setImage(#imageLiteral(resourceName: "shareOff"), for: UIControlState.normal)
+        }
         
         return cell
     }

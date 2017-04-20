@@ -537,7 +537,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkOff" highlightedImage="checkOn" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-jT-Zks">
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkOff" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-jT-Zks">
                                             <rect key="frame" x="276" y="6" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Qig-ia-qYo"/>
@@ -774,7 +774,6 @@
         <image name="ListaLogo" width="235" height="300"/>
         <image name="calendario" width="75" height="75"/>
         <image name="checkOff" width="30" height="30"/>
-        <image name="checkOn" width="30" height="29"/>
         <image name="launch-1" width="401" height="512"/>
         <image name="lista" width="61" height="75"/>
         <image name="shareOff" width="30" height="30"/>
